@@ -155,14 +155,39 @@
   .page-footer a:hover{color:white;}
   .footer-sep{border:none;border-top:1px solid var(--gray-mid);opacity:.4;margin:12px auto;max-width:400px;}
 
+  @media(max-width:900px){
+    .overview-bar{grid-template-columns:1fr 1fr;}
+    .metrics-grid{grid-template-columns:1fr 1fr;}
+  }
   @media(max-width:768px){
     .page-wrap{padding:24px 16px 60px;}
-    .header-main{padding:16px 20px;flex-direction:column;align-items:flex-start;}
+    .header-main{padding:16px 20px;flex-direction:column;align-items:flex-start;gap:12px;}
     .header-top{padding:7px 16px;}
-    .toc-nav{padding:0 16px;}
-    .overview-bar,.policy-cols,.two-col,.metrics-grid{grid-template-columns:1fr;}
+    .toc-nav{padding:0 12px;}
+    .toc-nav a{padding:10px 12px;font-size:12px;}
+    .overview-bar{grid-template-columns:1fr;}
+    .policy-cols{grid-template-columns:1fr;}
     .policy-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
-    .page-footer{padding:24px 16px;}
+    .two-col{grid-template-columns:1fr;}
+    .metrics-grid{grid-template-columns:1fr;}
+    .outputs-grid{grid-template-columns:1fr 1fr;}
+    .card{padding:20px 16px;}
+    .sprint-header{gap:12px;}
+    .prompt-body{font-size:12px;padding:16px;}
+    .page-footer{padding:24px 16px;text-align:left;}
+    .footer-sep{margin:12px 0;}
+  }
+  @media(max-width:520px){
+    .header-title-group h1{font-size:20px;}
+    .framework-badge{font-size:12px;padding:5px 12px;}
+    .sprint-num{width:44px;height:44px;font-size:20px;}
+    .sprint-header-text h2{font-size:18px;}
+    .section-title{font-size:16px;}
+    .outputs-grid{grid-template-columns:1fr;}
+    .check-box{width:22px;height:22px;}
+    .data-table{font-size:12px;}
+    .data-table th,.data-table td{padding:8px 10px;}
+    .metric-value{font-size:22px;}
   }
 </style>
 </head>
@@ -640,22 +665,14 @@ C. List of [STAFF: VERIFY] flags with the specific concern for each</pre>
   <strong>NSPA AI Implementation Series</strong> &mdash; 2/2/2 Framework &mdash; Example 1: Applicant Communications Pilot
   <hr class="footer-sep">
   Produced for the "Automating Office Tasks with AI" session &mdash; March 4, 2026<br>
-  Contact: <a href="mailto:mguhlin@tcea.org">mguhlin@tcea.org</a> &nbsp;|&nbsp; <strong><a href="https://go.mgpd.org/nspa3">Return to Session Resources</a></strong>
+  Contact: <a href="/cdn-cgi/l/email-protection#39545e4c51555057794d5a5c5817564b5e"><span class="__cf_email__" data-cfemail="711c1604191d181f31051214105f1e0316">[email&#160;protected]</span></a> &nbsp;|&nbsp; <strong><a href="https://go.mgpd.org/nspa3">Return to Session Resources</a></strong>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function copyPrompt(btn,id){
   navigator.clipboard.writeText(document.getElementById(id).textContent).then(()=>{
     btn.textContent='Copied!';btn.classList.add('copied');
     setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied');},2000);
   });
 }
-document.querySelectorAll('.check-box').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const on=b.dataset.c==='1';b.dataset.c=on?'0':'1';
-    b.style.background=on?'':'#237683';b.style.borderColor=on?'':'#237683';
-  });
-});
-</script>
-</body>
-</html>
+document.querySele
